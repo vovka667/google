@@ -10,7 +10,7 @@ class WidgetTestCase(unittest.TestCase):
     def test_google2(self):
         self.assertEqual(solution.solution([4, 3, 10, 2, 8], 12), [2, 3])
 
-    def test_single(self):
+    def test_single1(self):
         self.assertEqual(solution.solution([4, 3, 12, 2, 8], 12), [2, 2])
 
     def test_single2(self):

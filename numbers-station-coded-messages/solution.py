@@ -1,10 +1,11 @@
 def solution(l, t):
-    for i in range(len(l)):
-        sum = 0
-        for j in range(i, len(l)):
-            sum += l[j]
-            if sum == t:
-                return [i, j]
-            if sum > t:
-                break
+    sum = 0
+    begin = 0
+    for end in range(len(l)):
+        sum += l[end]
+        while sum > t:
+            sum -= l[begin]
+            begin += 1
+        if sum == t:
+            return [begin, end]
     return [-1, -1]
