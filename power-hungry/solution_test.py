@@ -17,7 +17,7 @@ class WidgetTestCase(unittest.TestCase):
         self.assertEqual(solution.solution([2]), "2")
 
     def test_one_negative(self):
-        self.assertEqual(solution.solution([-2]), "0")
+        self.assertEqual(solution.solution([-2]), "-2")
 
     def test_zero(self):
         self.assertEqual(solution.solution([0]), "0")
@@ -32,19 +32,19 @@ class WidgetTestCase(unittest.TestCase):
         self.assertEqual(solution.solution([1, 1, 1]), "1")
 
     def test_minus_ones(self):
-        self.assertEqual(solution.solution([-1, -1, -1]), "1")
+        self.assertEqual(solution.solution([-2, -5, 1]), "10")
 
     def test_various_ones(self):
         self.assertEqual(solution.solution([1, -1, -1]), "1")
 
     def test_one_negative_one_positive(self):
-        self.assertEqual(solution.solution([1, -2]), "1")
+        self.assertEqual(solution.solution([-1, 2]), "2")
 
     def test_one_negative_zero(self):
-        self.assertEqual(solution.solution([-2, 0]), "0")
+        self.assertEqual(solution.solution([-20, -1, 20]), "400")
 
     def test_huge(self):
-        self.assertEqual(solution.solution([1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000]), "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+        self.assertEqual(solution.solution([-1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000, -1000]), "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 if __name__ == '__main__':
     unittest.main()

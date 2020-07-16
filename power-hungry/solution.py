@@ -8,17 +8,20 @@ def solution(xs):
             continue
         nonzeros += 1
         if result == 0:
-            result = 1
-        result *= value
+            result = long(1)
+        result *= long(value)
 
         if value < 0:
             if min_negative < value or min_negative == 0:
                 min_negative = value
 
     if result < 0:
-        if nonzeros < 2:
-            result = 0
+        if nonzeros == 1:
+            if len(xs) == 1:
+                return(result)
+            else:
+                return str(0)
         else:
-            result /= min_negative
+            result /= long(min_negative)
 
     return str(result)
