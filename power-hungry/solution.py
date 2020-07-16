@@ -1,7 +1,7 @@
 def solution(xs):
     min_negative = 0
     nonzeros = 0
-    result = 0
+    result = long(0)
 
     for value in xs:
         if value == 0:
@@ -17,7 +17,8 @@ def solution(xs):
 
     if result < 0:
         if nonzeros < 2:
-            return 0
-        result /= min_negative
+            result = 0
+        else:
+            result /= min_negative
 
-    return result
+    return str(result)
